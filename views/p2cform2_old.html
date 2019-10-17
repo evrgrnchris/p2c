@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>P2C Kolkata - Caller Information Form</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- load fontawesome -->
+    <style>
+      body        { padding-top:0px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <form id = "p2cform" method="post" >
+      <div class="panel panel-primary">
+        <div class="panel-heading" >
+          <div class="row">
+            <div class="col-sm-6" >
+              <h3>P2C Kolkata - Caller Information Form</h3>
+            </div>
+            <div class="col-sm-3" >
+              <div class="pull-right" >
+              	<button type="reset" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-remove"></span>&nbsp;Reset</button>
+                
+              </div>
+            </div>
+            <div class="col-sm-3" >
+              <div class="pull-right" >
+                <a href="/logout" class="btn btn-danger btn-lg">
+                <span class="glyphicon glyphicon-log-out"></span> Log out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          
+            <input id="jsondata" type="hidden" name="jsondata"/>
+            <input id="submit_dt" type="hidden" name="submit_dt"/>
+            <div class="row">
+              <div class="col-sm-6" >
+                <div class="form-group">
+                  <label for="name">NAME</label>
+                  <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
+                </div>
+              </div>
+              <div class="col-sm-6" >
+                <div class="form-group">
+                  <label for="phone">PHONE</label>
+                  <input type="text" class="form-control"  id="phone" placeholder="10 digit phone no" name="phone">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6" >
+                <label class="form-group">AGE GROUP</label>
+                <div class="well well-sm">
+                  <label class="radio-inline"><input name="age" id="c-5-33" type="radio" value="0-17"><span>&lt;18</span></label>
+                  <label class="radio-inline"><input name="age" id="c-5-34" type="radio" value="18-30"><span>18-30</span></label>
+                  <label class="radio-inline"><input name="age" id="c-5-35" type="radio" value="31-50"><span>31-50</span></label>
+                  <label class="radio-inline"><input name="age" id="c-5-36" type="radio" value="51-80"><span>51-80</span></label>
+                  <label class="radio-inline"><input name="age" id="c-5-37" type="radio" value="81-0"><span>80+</span></label>
+                  <label class="radio-inline"><input name="age" id="c-5-38" type="radio" value="na" checked><span>n/a</span></label>
+                </div>
+              </DIV>
+              <div class="col-sm-6" >
+                <label class="form-group">GENDER</label>
+                <div class="well well-sm">
+                  <label class="radio-inline"><input name="gender" id="c-6-29" type="radio" value="M"><span>Male</span></label>
+                  <label class="radio-inline"><input name="gender" id="c-6-30" type="radio" value="F"><span>Female</span></label>
+                  <label class="radio-inline"><input name="gender" id="c-6-31" type="radio" value="na"><span>n/a</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12" >
+                <label class="form-group">HOW DID YOU HEAR ABOUT THE CAMPAIGN?</label>
+                <div class="well well-sm">
+                  <label class="checkbox-inline"><input name="source" id="c-7-27" type="checkbox" value="TV"><span>TV</span></label>		
+                  <label class="checkbox-inline"><input name="source" id="c-7-26" type="checkbox" value="Radio"><span>Radio</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-25" type="checkbox" value="Newspaper"><span>Newspaper</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-24" type="checkbox" value="Hoardings"><span>Hoardings</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-23" type="checkbox" value="Bus_Train_Banners"><span>Bus/Train Banners</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-22" type="checkbox" value="Flyers"><span>Flyers</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-21" type="checkbox" value="Friend"><span>Friend</span></label>
+                  <label class="checkbox-inline"><input name="source" id="c-7-20" type="checkbox" value="Others"><span>Others</span></label>
+                  <label class="checkbox-inline"><input type="text" class="form-control"  id="source.others" placeholder="other sources" name="source.others"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12" >
+                <label class="form-group">REASON FOR CALLING</label>
+                <div class="well well-sm">
+                  <label class="checkbox-inline"><input name="reason" id="c-8-8"   type="checkbox" value="Health_Issues"><span>Health Issues</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-9"   type="checkbox" value="Financial_Problems"><span>Financial Problems</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-10" type="checkbox" value="Family_Problems"><span>Family Problems</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-11" type="checkbox" value="Depression"><span>Depression</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-19" type="checkbox" value="Suicidal"><span>Suicidal</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-12" type="checkbox" value="Drugs"><span>Drugs	</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-13" type="checkbox" value="Alcoholism"><span>Alcoholism</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-14" type="checkbox" value="Smoking"><span>Smoking</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-15" type="checkbox" value="Abuse"><span>Abuse	</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-16" type="checkbox" value="Work_Problems"><span>Work Problems</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-17" type="checkbox" value="Relationship_Issues"><span>Relationship Issues</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-18" type="checkbox" value="General_Enquiry"><span>General Enquiry</span></label>
+                  <label class="checkbox-inline"><input name="reason" id="c-8-21" type="checkbox" value="Others"><span>Others</span></label>
+                  <label class="checkbox-inline"><input type="text" class="form-control"  id="reason.others" placeholder="other reasons" name="reason.others"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12" >
+                <label class="form-group">ADDRESS</label>
+                <div class="well well-sm">
+                  <div class="row">
+                    <div class="col-sm-6" >
+                      <div class="form-group">
+                        <input id="c-10-3" class="form-control"  placeholder="Address Line 1" type="text" name="addr.line1">
+                      </div>
+                    </div>
+                    <div class="col-sm-6" >
+                      <div class="form-group">
+                        <input id="c-11-3" class="form-control"  placeholder="Address Line 2" type="text" name="addr.line2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4" >
+                      <div class="form-group">	
+                        <input id="c-12-3" class="form-control"  placeholder="City" type="text" name="addr.city">
+                      </div>
+                    </div>
+                    <div class="col-sm-4" >
+                      <div class="form-group">
+                        <select class="form-control" id="addr.state" name="addr.state">
+                          <option value="AP">Andhra Pradesh</option>
+                          <option value="AR">Arunachal Pradesh</option>
+                          <option value="AS">Assam</option>
+                          <option value="BR">Bihar</option>
+                          <option value="CT">Chhattisgarh</option>
+                          <option value="GA">Goa</option>
+                          <option value="GJ">Gujarat</option>
+                          <option value="HR">Haryana</option>
+                          <option value="HP">Himachal Pradesh</option>
+                          <option value="JK">Jammu and Kashmir</option>
+                          <option value="JH">Jharkhand</option>
+                          <option value="KA">Karnataka</option>
+                          <option value="KL">Kerala</option>
+                          <option value="MP">Madhya Pradesh</option>
+                          <option value="MH">Maharashtra</option>
+                          <option value="MN">Manipur</option>
+                          <option value="ML">Meghalaya</option>
+                          <option value="MZ">Mizoram</option>
+                          <option value="NL">Nagaland</option>
+                          <option value="OR">Odisha</option>
+                          <option value="PB">Punjab</option>
+                          <option value="RJ">Rajasthan</option>
+                          <option value="SK">Sikkim</option>
+                          <option value="TN">Tamil Nadu</option>
+                          <option value="TG">Telangana</option>
+                          <option value="TR">Tripura</option>
+                          <option value="UT">Uttarakhand</option>
+                          <option value="UP">Uttar Pradesh</option>
+                          <option value="WB" selected="selected">West Bengal</option>
+                          <option value="AN">Andaman and Nicobar Islands</option>
+                          <option value="CH">Chandigarh</option>
+                          <option value="DN">Dadra and Nagar Haveli</option>
+                          <option value="DD">Daman and Diu</option>
+                          <option value="DL">Delhi</option>
+                          <option value="LD">Lakshadweep</option>
+                          <option value="PY">Puducherry</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4" >
+                      <div class="form-group">
+                        <input id="c-14-3" class="form-control"  placeholder="PIN Code" type="text" name="addr.pin">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6" >
+                <label class="form-group">HOW WOULD YOU LIKE TO RECEIVE THE FREE BOOK - POWER TO CHANGE?</label>
+                <div class="well well-sm">
+                  <label class="radio-inline"><input name="delivery" id="c-9-5" checked="checked" type="radio" value="hand"><span>Hand Delivery</span></label>
+                  <label class="radio-inline"><input name="delivery" id="c-9-6" type="radio" value="Others"><span>Other mode</span></label>
+                  <label class="radio-inline"><input type="text" class="form-control"  id="delivery.others" placeholder="other delivery modes" name="delivery.others"></label>
+                </div>
+              </DIV>
+              <div class="col-sm-6" >
+                <label class="form-group">C/C VOLUNTEER USERNAME</label>
+                <div class="well well-sm">
+                  <input id="volunteer" class="form-control"  placeholder="volunteer" type="text" name="volunteer" value="<%= volunteer %>">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6" >
+                <button type="submit" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;Submit&nbsp;</button>
+              </div>
+              <div class="col-sm-6" >
+              	
+              </div>
+            </div>
+          
+        </div>
+      </div>
+      </form>
+    </div>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script>
+      const getSelectValues = options => [].reduce.call(options, (values, option) => {
+      return option.selected ? values.concat(option.value) : values;
+      }, []);
+      
+      const isCheckbox = element => element.type === 'checkbox';
+      
+      const isMultiSelect = element => element.options && element.multiple;
+      
+      const isValidElement = element => {
+      return element.name && element.value;
+      };
+      const isValidValue = element => {
+      return (!['checkbox', 'radio'].includes(element.type) || element.checked);
+      };	
+      const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+      
+      // Make sure the element has the required properties and should be added.
+      if (isValidElement(element) && isValidValue(element)) {
+      
+       /*
+        * Some fields allow for more than one value, so we need to check if this
+        * is one of those fields and, if so, store the values as an array.
+        */
+       if (isCheckbox(element)) {
+         data[element.name] = (data[element.name] || []).concat(element.value);
+       } else if (isMultiSelect(element)) {
+         data[element.name] = getSelectValues(element);
+       } else {
+         data[element.name] = element.value;
+       }
+      }
+      
+      return data;
+      
+      }, {});
+      
+      const handleFormSubmit = event => {
+      
+      // Stop the form from submitting since we’re handling that with AJAX.
+      event.preventDefault();
+      document.getElementById("submit_dt").value = new Date().toLocaleString();
+      // TODO: Call our function to get the form data.
+      const data = formToJSON(form.elements);
+      
+      // Demo only: print the form data onscreen as a formatted JSON object.
+      const dataContainer = document.getElementById( "jsondata" );
+      
+      // Use `JSON.stringify()` to make the output valid, human-readable JSON.
+      dataContainer.value = JSON.stringify(data, null, "  ");
+      
+      // ...this is where we’d actually do something with the form data...
+      form.submit();
+      };
+      
+      const form = document.getElementById( "p2cform" );
+      form.action = "/submitform";
+      form.addEventListener('submit', handleFormSubmit);
+    </script>
+  </body>
+</html>
+
