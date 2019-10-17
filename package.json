@@ -1,0 +1,33 @@
+{
+  "name": "cloudant_boilerplate_nodejs",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "app": "^0.1.0",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "1.17.x",
+    "cloudant": "1.7.x",
+    "connect-flash": "~0.1.1",
+    "connect-multiparty": "2.0.x",
+    "cookie-parser": "~1.0.0",
+    "ejs": "2.5.x",
+    "errorhandler": "1.5.x",
+    "express": "4.15.x",
+    "express-session": "^1.x.x",
+    "form-serialize": "^0.7.2",
+    "get-form-data": "^1.2.5",
+    "method-override": "2.3.x",
+    "morgan": "1.8.x",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "resourceful": "^0.2.3",
+    "server": "^1.0.0-beta.3"
+  },
+  "repository": {},
+  "engines": {
+    "node": "6.x"
+  }
+}
